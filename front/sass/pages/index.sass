@@ -17,12 +17,163 @@ body
 .land
   height: calc(100% - 83px)
   position: relative
+  overflow: hidden
+  display: flex
+  background: url("../img/bg-desc.jpg") no-repeat 50% 0/cover
+  @media screen and (min-width: 650px) and (orientation: landscape) and (min-height: 451px)
+    background: url('../img/bg-desc.jpg') no-repeat 50% 0/cover
+  @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+      background: url('../img/bg-tab.jpg') no-repeat 50% 0/cover
+  @media screen and (max-width: 600px) and (orientation: portrait)
+      background: url("../img/bg-mob.jpg") no-repeat 50% 0/cover
+  @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
+      background: url("../img/bg-landscape.jpg") no-repeat 50% 0/cover
+  &::before, &::after
+    position: absolute
+    content: ""
+    display: block
+    left: 0
+    z-index: 2
+  &::before
+    bottom: 100px
+    height: 300px
+    width: 100%
+    background: url("../img/smoke-top.png") repeat 0 0/cover
+    animation: top-smoke 600s linear infinite
+  &::after
+    bottom: 0
+    height: 300px
+    width: 100%
+    background: url("../img/smoke-bottom.png") repeat 0 0/cover
+    animation: bottom-smoke 500s linear infinite
   &__logo
     position: absolute
     top: 0
     left: 0
     max-width: 300px
+  &__left
+    width: 50%
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: center
+    position: relative
+    z-index: 3
+    padding: 100px 0 7px 35px
+  &__title
+    color: $white
+    font-size: 46px
+    font-family: $font-riffic-bold
+    text-transform: uppercase
+    text-shadow: 0px 2.472px 4.944px rgba(0, 0, 0, 0.25)
+    letter-spacing: .03em
+    margin-top: auto
+  &__prize
+    color: $magenta
+    font-size: 154px
+    font-family: $font-riffic-bold
+    text-shadow: 0px 4.086px 4.086px rgba(0, 0, 0, 0.25)
+    span
+      font-size: 80px
+      font-family: $font-riffic-bold
+      text-transform: uppercase
+      //margin-left: 0
+      //margin-right: -.1em
+      &:nth-child(1)
+        margin-right: -.3em
+      &:nth-child(2)
+        font-family: $font-suisse-intl-bold
+        font-size: 154px
+        margin-left: -.25em
+
+  &__spins
+    font-family: $font-riffic-bold
+    color: $magenta
+    text-transform: uppercase
+    text-shadow: 0px 5.079px 5.079px rgba(0, 0, 0, 0.25)
+    font-size: 96px
+    line-height: 82px
+    br
+      display: none
+
+  &__right
+    width: 50%
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    &-pers
+      z-index: 2
+      max-width: 65vh
+      position: relative
+      top: 20vh
+    &-plane
+      position: absolute
+      width: 80vw
+      bottom: 0
+      right: 0
+      &::before
+        content: ""
+        display: block
+        width: 8%
+        height: 20%
+        top: 55%
+        left: 28%
+        position: absolute
+        background: #fff
+        opacity: .8
+        filter: blur(65px)
+        transform: rotate(-24.68deg)
+        animation: plane-anim 7s linear infinite
+  &__btn
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 395px
+    height: 93px
+    border-radius: 100px
+    background: repeating-conic-gradient(from var(--btn-gradient-rotate), #06BC84 0%,  #3AFFC3 50%, #06BC84 100%)
+    align-self: flex-start
+    margin: 150px 14vw 0px auto
+    animation: btn-anim 3.5s ease-in-out infinite
+    span
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 387px
+      height: 85px
+      background: linear-gradient(90deg, #07C48A 0%, #06BC84 100%)
+      border-radius: 100px
+      font-family: $font-riffic-bold
+      color: $blue
+      letter-spacing: .08em
+      font-size: 32px
+      text-transform: uppercase
+    &::before, &::after
+      display: block
+      content: ""
+      position: absolute
+      top: -25px
+      width: 135px
+      height: 118px
+    &::before
+      left: -145px
+      background: url("../img/left-wing-btn.png") no-repeat 0 0/contain
+    &::after
+      right: -145px
+      background: url("../img/right-wing-btn.png") no-repeat 0 0/contain
+  &__bottom-txt
+    color: $white
+    font-size: 14px
+    line-height: 22px
+    font-family: $font-suisse-intl-reg
+    margin-top: auto
+    width: 81vw
+    align-self: flex-start
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25)
 .footer
+  position: relative
+  z-index: 2
   background: $blue
   height: 83px
   display: flex
@@ -65,3 +216,52 @@ body
   font-size: 4.7vw
   padding: 0 15px
   text-align: center
+  position: relative
+  z-index: 3
+  background: $white
+  color: $black
+
+@property --btn-gradient-rotate
+  syntax: '<angle>'
+  inherits: false
+  initial-value: 0deg
+
+@keyframes btn-anim
+  0%, 100%
+    --btn-gradient-rotate: 90deg
+  50%
+    --btn-gradient-rotate: 260deg
+
+@keyframes bottom-smoke
+  0%
+    background-position: 0 0
+  100%
+   background-position: 700% 0
+
+@keyframes top-smoke
+  0%
+    background-position: 0 0
+  100%
+   background-position: -700% 0
+
+@keyframes plane-anim
+  0%, 100%
+    left: 28%
+    height: 20%
+    top: 55%
+  25%
+    height: 60%
+    top: 15%
+  50%
+    left: 60%
+    height: 50%
+    top: 25%
+  75%
+    height: 60%
+    top: 15%
+
+@keyframes plane-anim-mob
+  0%, 100%
+    opacity: 0
+  50%
+    opacity: 1

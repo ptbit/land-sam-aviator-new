@@ -1,3 +1,65 @@
+
+@media screen and (min-width: 2200px)
+  .land
+    &__title
+      font-size: 56px
+    &__prize
+      font-size: 187px
+      span
+        font-size: 100px
+        &:nth-child(2)
+          font-size: 187px
+    &__spins
+      font-size: 120px
+      line-height: 122px
+
+    &__btn
+      transform: scale(1.2)
+      transform-origin: right
+    &__bottom-txt
+      font-size: 16px
+
+@media screen and (min-width: 2200px) and (max-height: 1050px)
+  .land
+    &__btn
+      margin-top: 80px
+
+
+@media screen and (max-width: 1920px) and (max-height: 920px)
+  .land
+    &::before, &::after
+      height: 190px
+    &::before
+      bottom: 50px
+    &__btn
+      margin-top: 100px
+
+@media screen and (max-width: 1600px)
+  .land
+    &__left
+      width: 45%
+    &__title
+      font-size: 37px
+    &__prize
+      font-size: 123px
+      span
+        font-size: 64px
+        &:nth-child(2)
+          font-size: 123px
+    &__spins
+      font-size: 77px
+      line-height: 66px
+    &__btn
+      transform: scale(.75)
+      transform-origin: right
+    &__bottom-txt
+      font-size: 12px
+
+@media screen and (max-width: 1600px) and (max-height: 750px)
+  .land
+    &__btn
+      margin-top: 60px
+
 @media screen and (max-width: 1550px)
   .footer
     &__text
@@ -5,7 +67,29 @@
       line-height: 18px
       max-width: 775px
 
+@media screen and (max-width: 1500px)
+  .land
+    &__title
+      font-size: 31px
+    &__prize
+      font-size: 104px
+      span
+        font-size: 54px
+        &:nth-child(2)
+          font-size: 104px
+    &__spins
+      font-size: 65px
+      line-height: 56px
+    &__btn
+      transform: scale(.65)
+
+
 @media screen and (max-width: 1368px)
+  .land
+    &__bottom-txt
+      font-size: 11px
+    &__left
+      padding-left: 20px
   .footer
     padding: 5px 10px 5px 20px
     &__licensed
@@ -29,14 +113,225 @@
       width: 103px
       height: 31px
 
+@media screen and (max-width: 1368px) and (min-height: 900px)
+  .land
+    &__right
+      &-plane
+        width: 90vw
+    &__btn
+      margin-right: 8vw
+      transform: scale(.75)
+
+@media screen and (max-width: 1368px) and (max-height: 720px)
+  .land
+    &__right
+      &-plane
+        width: 70vw
+
+@media screen and (max-width: 1300px)
+  .land
+    &__left
+      width: 50%
+    &__bottom-txt
+      width: 90vw
+      font-size: 10px
+
+@media screen and (max-width: 1300px) and (max-height: 850px)
+  .land
+    &__right
+      &-pers
+        max-width: 500px
+
+@media screen and (max-width: 1300px) and (max-height: 750px)
+  .land
+    &__right
+      &-pers
+        max-width: 450px
+
+@media screen and (max-width: 1300px) and (max-height: 700px)
+  .land
+    &__right
+      &-pers
+        max-width: 400px
+
+@media screen and (max-width: 1300px) and (max-height: 630px)
+  .land
+    &__logo
+      max-width: 220px
+    &__right
+      &-pers
+        max-width: 370px
+    &__btn
+        margin-top: 40px
+
+@media screen and (max-width: 1120px)
+  .land
+    &__left
+      width: 55%
+
 @media screen and (max-width: 1024px)
+  .land
+    &::before
+      height: 140px
+      bottom: 50px
+    &::after
+      height: 140px
+    &__logo
+      max-width: 240px
+    &__left
+      padding: 80px 20px 7px 20px
+      width: 100%
+      align-items: center
+      &-wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 25px
+    &__right
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      justify-content: flex-end
+      &-pers
+        max-width: 485px
+        top: 100px
+        right: 0
+      &-plane
+        right: auto
+        left: -10%
+        width: 150%
+    &__btn
+      margin:  auto auto 0 auto
+      transform: scale(.85)
+      transform-origin: center
+    &__title
+      margin-top: 50px
+      font-size: 40px
+      text-shadow: 0px 2.24px 4.48px rgba(0, 0, 0, 0.25)
+    &__prize
+      font-size: 94px
+      span
+        font-size: 50px
+        &:nth-child(1)
+          text-shadow: 0px 2.641px 2.641px rgba(0, 0, 0, 0.25)
+        &:nth-child(2)
+          font-size: 94px
+    &__spins
+      font-size: 34px
+      line-height: 40px
+      text-shadow: 0px 2.641px 2.641px rgba(0, 0, 0, 0.25)
+      br
+        display: block
+    &__bottom-txt
+      font-size: 12px
+      line-height: 17px
+      margin-top: 35px
+
   .footer
     &__text
       font-size: 11px
+  .legal
+    font-size: 6.7vw
+    line-height: 1em
+    padding: 10px
+
+
+@media screen and (max-width: 1024px) and (orientation: landscape)
+  .land
+    height: calc(100% - 100px)
+  .footer
+    height: 100px
+
+@media screen and (max-width: 1024px) and (min-height: 1100px)
+  .land
+    &__right
+      &-pers
+        max-width: 510px
+
+@media screen and (max-width: 1024px) and (min-height: 1300px)
+  .land
+    &__right
+      &-pers
+        max-width: 610px
+
+@media screen and (max-width: 1024px) and (max-height: 1080px)
+  .land
+    &__right
+      &-pers
+        max-width: 440px
+
+@media screen and (max-width: 1024px) and (max-height: 980px)
+  .land
+    &__right
+      &-pers
+        max-width: 400px
+
+@media screen and (max-width: 1024px) and (max-height: 920px)
+  .land
+    &__right
+      &-pers
+        max-width: 370px
+
+@media screen and (max-width: 1024px) and (max-height: 850px)
+  .land
+    &__right
+      &-pers
+        max-width: 350px
+
+@media screen and (max-width: 1024px) and (max-height: 820px)
+  .land
+    &__right
+      &-pers
+        max-width: 320px
+      &-plane
+        left: 10%
+        width: 100%
+
+@media screen and (max-width: 1024px) and (max-height: 770px)
+  .land
+    &__title
+      margin-top: 20px
+
+@media screen and (max-width: 1024px) and (max-height: 770px) and (orientation: landscape)
+  .land
+    &__left
+      width: 60%
+      &-wrap
+        flex-direction: column
+        align-items: center
+        gap: 0
+    &__title
+      font-size: 28px
+      margin-top: 50px
+    &__spins
+      font-size: 59px
+      br
+        display: none
+    &__btn
+      transform: scale(.65)
+    &__right
+      &-pers
+        max-width: 400px
+      &-plane
+        left: 30%
+        width: 90%
+
+@media screen and (max-width: 1024px) and (max-height: 640px) and (orientation: landscape)
+  .land
+    &__title
+      margin-top: 25px
+    &__right
+      &-pers
+        max-width: 370px
+
+
 
 @media screen and (max-width: 950px)
   .land
     height: calc(100% - 100px)
+    &__btn
+      transform: scale(.62)
   .footer
     height: 100px
     &__wrap
@@ -45,7 +340,6 @@
     &__licensed
       margin: 0 0 10px 0
       justify-content: space-between
-
       &-item
         &:nth-child(1)
           width: 24px
@@ -60,18 +354,83 @@
     &__btns
       width: 100%
       justify-content: space-between
-    //&__appstore
-    //  width: 101px
-    //  height: 30px
-    //&__googlePlay
-    //  width: 164px
-    //  height: 48px
 
+@media screen and (max-width: 750px) and (orientation: portrait)
+  .land
+    &__title
+      font-size: 38px
+    &__prize
+      font-size: 89px
 @media screen and (max-width: 650px) and (orientation: portrait)
   .land
     height: 700px
+    &::before
+      content: none
+    &__right
+      &-pers
+        max-width: 310px
+      &-plane
+        width: 900px
+        left: -190px
+        &::before
+          filter: none
+          width: 55px
+          height: 55px
+          top: 34%
+          left: 32%
+          transform: rotate(0)
+          animation: plane-anim-mob 4s ease-in-out infinite
+          background: url("../img/plane-star.png") no-repeat 0 0/contain
+    &__left
+      padding: 60px 10px 7px 10px
+      &-wrap
+        gap: 0
+        flex-direction: column
+    &__title
+      font-size: 20px
+      margin: 35px 0 10px 0
     &__logo
       max-width: 170px
+
+    &__prize
+      line-height: 62px
+      font-size: 68px
+      span
+        &:nth-child(1)
+          font-size: 32px
+          text-shadow: 0px 1.735px 1.735px rgba(0, 0, 0, 0.25)
+        &:nth-child(2)
+          font-size: 68px
+    &__spins
+      font-size: 42px
+      line-height: 34px
+      text-shadow: 0px 2.157px 2.157px rgba(0, 0, 0, 0.25)
+      br
+        display: none
+    &__btn
+      width: 204px
+      height: 46px
+      transform: scale(1)
+      align-self: center
+      span
+        font-size: 16px
+        width: 200px
+        height: 42px
+      &::before, &::after
+        width: 62px
+        height: 54px
+        top: -9px
+      &::before
+        left: -68px
+      &::after
+        right: -68px
+
+    &__bottom-txt
+      font-size: 10px
+      line-height: 17px
+      text-align: center
+      max-width: 335px
+      margin: 15px auto 0 auto
   .footer
     flex-direction: column
     height: auto
@@ -104,6 +463,68 @@
       height: 49px
   .legal
     font-size: 6.7vw
+
+@media screen and (max-width: 360px) and (orientation: portrait)
+  .land
+    height: 650px
+    &__title
+      font-size: 17px
+    &__prize
+      font-size: 60px
+      line-height: 55px
+      span
+        &:nth-child(1)
+          font-size: 28px
+        &:nth-child(2)
+          font-size: 60px
+    &__spins
+      font-size: 37px
+      line-height: 34px
+    &__btn
+      transform: scale(.9)
+    &__bottom-txt
+      font-size: 8.5px
+      line-height: 13px
+    &__right
+      &-pers
+        max-width: 280px
+        top: 85px
+  .footer
+    padding: 15px 20px
+    &__text
+      max-width: 300px
+    &__wrap
+      transform: scale(.93)
+  .legal
+    font-size: 6.6vw
+
+@media screen and (max-width: 320px) and (orientation: portrait)
+  .land
+    &__title
+      font-size: 16px
+    &__prize
+      font-size: 55px
+      line-height: 52px
+      span
+        &:nth-child(1)
+          font-size: 24px
+        &:nth-child(2)
+          font-size: 55px
+    &__spins
+      font-size: 34px
+      line-height: 32px
+    &__bottom-txt
+      font-size: 8px
+    &__btn
+      transform: scale(.85)
+    &__right
+      &-plane
+        left: -220px
+  .footer
+    padding: 10px 20px
+    &__wrap
+      transform: scale(.85)
+
 
 
 @media screen and (max-width: 950px) and (max-height: 450px) and (orientation: landscape)

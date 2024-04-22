@@ -1,16 +1,26 @@
 .land
     .land__logo
         img(src="./img/logo.png" alt="favbet")
-    //.land__left
-    //    .land__title До нових висот з бонусом*
-    //    .land__prize 15 000₴
-    //    .land__spins + 300 фрiспiнiв
-    //    .land__btn хапай штурвал
-    //.land__right
-    //    .land__right-pers
-    //        img(src="./img/pers.png" alt="favbet")
-    //    .land__right-plane
-    //        img(src="./img/plane.png" alt="favbet")
+    .land__left
+        .land__title До нових висот з бонусом*
+        .land__left-wrap
+            .land__prize #[span до] 15 000 #[span ₴]
+            .land__spins + 300 <br> фрiспiнiв
+        a(href="#").land__btn #[span хапай штурвал]
+        .land__bottom-txt * Під бонусом розуміється можливість отримати приз в рамках Акції “Вітальний бонус”. Деталі на сайті favbet.ua. Період Акції з 01.02.2023 по 31.12.2024 року. Бонус доступний тільки для нових клієнтів
+    .land__right
+        .land__right-pers
+            picture
+                source(media="(max-width: 600px) and (orientation: portrait)", srcset="./img/pers-mob.png")
+                source(media="(max-width: 950px) and (max-height: 450px) and (orientation: landscape)", srcset="./img/pers-mob.png")
+                source(media="(max-width: 1024px)", srcset="./img/pers-tab.png")
+                img(src="./img/pers-desc.png", alt="favbet")
+        .land__right-plane
+                picture
+                    source(media="(max-width: 600px) and (orientation: portrait)", srcset="./img/plane-mob.png")
+                    source(media="(max-width: 950px) and (max-height: 450px) and (orientation: landscape)", srcset="./img/plane-mob.png")
+                    source(media="(max-width: 1024px)", srcset="./img/plane-tab.png")
+                    img(src="./img/plane-desc.png", alt="favbet")
 .footer
     .footer__text  ТОВ «БУКМЕКЕРСЬКА КОМПАНІЯ «ФАВБЕТ». Ліцензія на провадження діяльності з організації та проведення букмекерської діяльності від 28.12.2022, видана згідно з рішенням КРАІЛ № 433 від 13.12.2022 та Ліцензія на провадження діяльності з організації та проведення азартних ігор казино в мережі Інтернет від 20.04.2021, видана згідно з рішенням КРАІЛ № 137 від 05.04.2021, зі змінами.
     .footer__wrap
