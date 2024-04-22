@@ -1,4 +1,3 @@
-
 @media screen and (min-width: 2200px)
   .land
     &__title
@@ -12,7 +11,6 @@
     &__spins
       font-size: 120px
       line-height: 122px
-
     &__btn
       transform: scale(1.2)
       transform-origin: right
@@ -23,7 +21,6 @@
   .land
     &__btn
       margin-top: 80px
-
 
 @media screen and (max-width: 1920px) and (max-height: 920px)
   .land
@@ -82,7 +79,6 @@
       line-height: 56px
     &__btn
       transform: scale(.65)
-
 
 @media screen and (max-width: 1368px)
   .land
@@ -227,7 +223,6 @@
       font-size: 12px
       line-height: 17px
       margin-top: 35px
-
   .footer
     &__text
       font-size: 11px
@@ -235,7 +230,6 @@
     font-size: 6.7vw
     line-height: 1em
     padding: 10px
-
 
 @media screen and (max-width: 1024px) and (orientation: landscape)
   .land
@@ -325,8 +319,6 @@
       &-pers
         max-width: 370px
 
-
-
 @media screen and (max-width: 950px)
   .land
     height: calc(100% - 100px)
@@ -361,6 +353,7 @@
       font-size: 38px
     &__prize
       font-size: 89px
+
 @media screen and (max-width: 650px) and (orientation: portrait)
   .land
     height: 700px
@@ -369,6 +362,8 @@
     &__right
       &-pers
         max-width: 310px
+        right: -30px
+        top: 60px
       &-plane
         width: 900px
         left: -190px
@@ -391,7 +386,6 @@
       margin: 35px 0 10px 0
     &__logo
       max-width: 170px
-
     &__prize
       line-height: 62px
       font-size: 68px
@@ -424,7 +418,6 @@
         left: -68px
       &::after
         right: -68px
-
     &__bottom-txt
       font-size: 10px
       line-height: 17px
@@ -464,6 +457,17 @@
   .legal
     font-size: 6.7vw
 
+@media screen and (max-width: 376px) and (max-height: 640px) and (orientation: portrait)
+  .land
+    height: 610px
+    &__left
+      padding-top: 50px
+    &__title
+      margin-top: 15px
+    &__right
+      &-pers
+        top: 100px
+
 @media screen and (max-width: 360px) and (orientation: portrait)
   .land
     height: 650px
@@ -498,6 +502,13 @@
   .legal
     font-size: 6.6vw
 
+@media screen and (max-width: 360px) and (max-height: 640px) and (orientation: portrait)
+  .land
+    height: 600px
+    &__right
+      &-pers
+        top: 60px
+
 @media screen and (max-width: 320px) and (orientation: portrait)
   .land
     &__title
@@ -525,17 +536,191 @@
     &__wrap
       transform: scale(.85)
 
-
-
 @media screen and (max-width: 950px) and (max-height: 450px) and (orientation: landscape)
   .land
     height: calc(100% - 80px)
+    &__right
+      position: relative
+      justify-content: center
+      &-pers
+        max-width: 230px
+        top: 70px
+      &-plane
+        width: 70vw
+        left: auto
+        right: -15%
+        &::before
+          filter: none
+          width: 55px
+          height: 55px
+          top: 32%
+          left: 30%
+          transform: rotate(0)
+          animation: plane-anim-mob 4s ease-in-out infinite
+          background: url("../img/plane-star.png") no-repeat 0 0/contain
+    &__left
+      padding-top: 55px
+      &-wrap
+        margin-bottom: 20px
     &__logo
       max-width: 170px
-  .footer
-    height: 80px
+    &__title
+      font-size: 18px
+    &__prize
+      font-size: 62px
+      span
+        font-size: 32px
+        &:nth-child(2)
+          font-size: 62px
+    &__spins
+      font-size: 40px
+      line-height: 34px
+      &__spins
+        font-size: 33px
+        line-height: 28px
+    &__btn
+      width: 204px
+      height: 46px
+      transform: scale(1)
+      align-self: center
+      margin-top: auto
+      span
+        font-size: 16px
+        width: 200px
+        height: 42px
+      &::before, &::after
+        width: 62px
+        height: 54px
+        top: -9px
+      &::before
+        left: -68px
+      &::after
+        right: -68px
+    &__bottom-txt
+      font-size: 8px
+      line-height: 11px
+      margin-top: 20px
+      width: 90vw
     &__text
       font-size: 8px
       line-height: 14px
     &__wrap
       margin-left: 10px
+  .footer
+    height: 80px
+    &__text
+      font-size: 9px
+      line-height: 14px
+    &__wrap
+      margin-left: 10px
+
+@media screen and (max-width: 950px) and (max-height: 400px) and (orientation: landscape)
+  .land
+    &__left
+      padding-top: 45px
+
+@media screen and (max-width: 950px) and (max-height: 376px) and (orientation: landscape)
+  .land
+    &__title
+      font-size: 16px
+    &__prize
+      font-size: 56px
+      span
+        font-size: 29px
+        &:nth-child(2)
+          font-size: 56px
+    &__spins
+      font-size: 35px
+      line-height: 30px
+    &__right
+      &-pers
+        max-width: 210px
+
+@media screen and (max-width: 620px) and (max-height: 376px) and (orientation: landscape)
+  .land
+    &__btn
+      transform: scale(.9)
+  .footer
+    &__text
+      line-height: 11px
+
+@media screen and (max-height: 360px) and (orientation: landscape)
+  .land
+    &__logo
+      max-width: 120px
+    &__left
+      padding-top: 20px
+      &-wrap
+        margin-bottom: 0
+
+@media screen and (max-height: 345px) and (orientation: landscape)
+  .land
+    &__right
+      &-pers
+        max-width: 165px
+        top: 50px
+    &__title
+      font-size: 15px
+    &__prize
+      font-size: 51px
+      span
+        font-size: 25px
+        &:nth-child(2)
+          font-size: 51px
+    &__spins
+      font-size: 32px
+      line-height: 27px
+    &__btn
+      transform: scale(.85)
+      transform-origin: bottom
+    &__bottom-txt
+      margin-top: 5px
+
+@media screen and (max-height: 310px) and (orientation: landscape)
+  .land
+    &__btn
+      transform: scale(.7)
+
+/************************FOLD
+
+@media screen and (max-width: 700px) and (min-width: 640px) and (max-height: 700px) and (min-height: 640px) and (orientation: landscape)
+  .land
+    &__right
+      &-pers
+        max-width: 300px
+        top: 30px
+      &-plane
+        left: 20%
+        width: 100%
+    &__title
+      font-size: 18px
+      margin-top: 100px
+    &__prize
+      font-size: 60px
+      span
+        font-size: 32px
+        &:nth-child(2)
+          font-size: 63px
+    &__spins
+      font-size: 33px
+      line-height: 27px
+    &__btn
+      transform: scale(.55)
+
+@media screen and (max-width: 700px) and (min-width: 640px) and (max-height: 700px) and (min-height: 640px) and (orientation: portrait)
+  .land
+    &__right
+      &-plane
+        width: 110%
+        left: 0
+    &__title
+      font-size: 17px
+    &__prize
+      font-size: 60px
+      span
+        font-size: 30px
+        &:nth-child(2)
+          font-size: 60px
+    &__spins
+      font-size: 28px
+      line-height: 24px
