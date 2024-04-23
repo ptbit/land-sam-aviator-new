@@ -14,11 +14,20 @@ body
   img
     max-width: 100%
     height: auto
+.main__link
+  position: absolute
+  top: 0
+  right: 0
+  width: 100%
+  height: 100%
+  cursor: auto
 .land
   height: calc(100% - 83px)
   position: relative
   overflow: hidden
+  pointer-events: none
   display: flex
+  z-index: 10
   background: url("../img/bg-desc.jpg") no-repeat 50% 0/cover
   @media screen and (min-width: 650px) and (orientation: landscape) and (min-height: 451px)
     background: url('../img/bg-desc.jpg') no-repeat 50% 0/cover
@@ -131,7 +140,10 @@ body
     background: repeating-conic-gradient(from var(--btn-gradient-rotate), #06BC84 0%,  #3AFFC3 50%, #06BC84 100%)
     align-self: flex-start
     margin: 150px 14vw 0px auto
+    pointer-events: initial
     animation: btn-anim 3.5s ease-in-out infinite
+    &:hover
+      cursor: pointer
     span
       display: flex
       align-items: center
@@ -200,12 +212,18 @@ body
     background: url("../img/appleBtn.png") no-repeat 0 0/contain
     width: 114px
     height: 38px
+    pointer-events: initial
+    &:hover
+      cursor: pointer
   &__googlePlay
     display: block
     background: url("../img/googleBtn.svg") no-repeat 0 0/contain
     width: 128px
     height: 38px
     margin-left: 10px
+    pointer-events: initial
+    &:hover
+      cursor: pointer
 .legal
   font-family: $font-legal
   font-size: 4.7vw
