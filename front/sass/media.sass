@@ -407,6 +407,7 @@
       transform: scale(1)
       align-self: center
       span
+        padding-top: 2px
         font-size: 16px
         width: 200px
         height: 42px
@@ -678,8 +679,24 @@
 
 @media screen and (max-height: 310px) and (orientation: landscape)
   .land
+    height: calc(100% - 75px)
+    &__logo
+      max-width: 100px
     &__btn
       transform: scale(.7)
+    &__right
+      &-pers
+        max-width: 155px
+      &-plane
+        bottom: -10px
+  .footer
+    height: 75px
+
+@media screen and (max-height: 304px)
+  .land
+    &__title
+      margin-top: 5px
+
 
 /************************FOLD
 
